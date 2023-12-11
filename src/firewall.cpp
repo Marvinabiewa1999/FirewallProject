@@ -43,7 +43,6 @@ void Firewall::handleRequest(const std::string& sourceIP) {
             // Rate limit exceeded, block the request
             blockLog.push_back("Blocked: Rate limit exceeded for " + sourceIP);
             std::cout << "Blocked: Rate limit exceeded for " << sourceIP << "\n";
-            // You may want to add actual blocking logic here
         }
     }
 }
@@ -79,13 +78,12 @@ void Firewall::logBlockedTraffic(const std::string& reason, const std::string& s
     std::string logEntry = std::ctime(&current_time) + reason + " Source: " + sourceIP + " Destination: " + destinationIP;
     blockLog.push_back(logEntry);
 
-    // Implement log rotation and archiving here if needed
-    // This is a simplified example; consider using log rotation libraries for production
+    // Implement log rotation and archiving
     if (blockLog.size() > 1000) {
         blockLog.erase(blockLog.begin(), blockLog.begin() + 500);  // Keep the latest 500 entries
     }
 
-    // Optionally, write logs to a file
+    // logs to a file
     std::ofstream logFile("firewall_log.txt", std::ios::app);
     if (logFile.is_open()) {
         logFile << logEntry << "\n";
