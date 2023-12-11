@@ -31,7 +31,7 @@ int main() {
 
     Dashboard dashboard(firewall);
 
-    // Add your application logic here
+    // Add application logic here
     dashboard.run();
 
     return 0;
