@@ -1,0 +1,29 @@
+# !!! Coming from a background in data science in my undergad I never used any language other than python so this project was extremely hard for me, adding that I have no background in advanced networks and firewalls. I managed to do the coding part but I was unable to compile it with C++ compiler. It kept saying the files weren't in my project directory when infact ther wer. Due to that I was unable to execute the firewall itself.
+
+# Firewall Project
+
+## Overview
+
+This project implements a proxy firewall with a dashboard, designed to monitor and control incoming and outgoing network traffic based on specified criteria. The firewall includes features such as source/destination IP blocking, port blocking, rate limiting, geo-blocking, logging, and a web-based UI for administration.
+
+## Project Structure
+
+The project is organized into the following directories:
+
+- **build:** Contains build artifacts.
+- **include:** Contains header files.
+- **src:** Contains the source code files.
+- **.vscode:** Includes Visual Studio Code configuration files.
+
+
+### Prerequisites
+
+- C++ compiler (e.g., g++)
+- Git
+- (Add any other prerequisites specific to your project)
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/YourUsername/FirewallProject.git
+cd FirewallProject
