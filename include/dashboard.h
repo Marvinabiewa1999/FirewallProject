@@ -1,16 +1,19 @@
 #pragma once
-#include "firewall.h"
+
+#include <iostream>
+#include <map>
 
 class Dashboard {
 public:
-    // Constructor
-    Dashboard(const Firewall& firewall);
+    Dashboard();
 
-    // Run the dashboard
-    void run();
+    // Statistics and Monitoring
+    void displayTotalTraffic();
+    void displayTrafficBreakdown();
+    void displayBlockedRequestsByRule();
+    void displayBandwidthUsageOverTime();
 
 private:
-    const Firewall& firewall;
-
-    // Add private members or helper functions if needed
+   std::vector<std::string> rules;
 };
+
